@@ -1,0 +1,11 @@
+services:
+  webserver:
+      image: php:7.3-alpine3.15
+      ports:
+        - 80:80
+        - 443:443
+      volumes:
+        - .:/var/www/html
+      environment:
+        WEB_DOCUMENT_ROOT: /var/www/html/$ROOT_FOLDER
+        PHP_DATE_TIMEZONE: America/Sao_Paulo
