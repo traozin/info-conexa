@@ -1,20 +1,45 @@
 <?php
 /* @var $this SiteController */
 
-$this->pageTitle=Yii::app()->name;
-?>
+// $this->pageTitle = Yii::app()->name;
+// $posts = $dataProvider->getData();
+// ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<div id="title-container" class=" text-center m-5">
+	<h1><?= CHtml::encode(Yii::app()->name); ?></h1>
+	<div class="m-5 mb-0">
+		<div>
+			<h5 class="fw-normal ">Somos especialistas em empresas de serviços recorrentes e</h5>
+		</div>
+		<div>
+			<h5 class="fw-normal">queremos compartilhar tudo que estamos aprendendo. </h5>
+		</div>
+		<div>
+			<h5 class="fw-normal">Vamos Juntos?</h2>
+		</div>
+	</div>
+</div>
+<div id="posts-container" class="container d-flex justify-content-between align-items-around">
+	
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+</div>
+<div class="container d-flex align-items-center justify-content-center mt-3">
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+	<nav aria-label="Page navigation example">
+		<?php $zap = $this->widget('CLinkPager', array(
+			'pages' => $dataProvider->pagination,
+			'htmlOptions' => array('class' => 'pagination'),
+			'cssFile' => '',
+			'header' => '',
+			'firstPageCssClass' => 'd-none',
+			'selectedPageCssClass' => 'page-item active',
+			'internalPageCssClass' => 'page-item',
+			'previousPageCssClass' => 'page-item',
+			'nextPageCssClass' => 'page-item',
+			'lastPageCssClass' => 'd-none',
+			'firstPageLabel' => 'Primeiro',
+			'nextPageLabel' => 'Próximo',
+			'prevPageLabel' => 'Anterior',
+		)); ?>
+	</nav>
+</div>
