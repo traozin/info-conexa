@@ -183,3 +183,95 @@ REQUEST_URI=/
 in /var/www/html/blog/protected/views/site/index.php (23)
 in /var/www/html/blog/protected/controllers/SiteController.php (32)
 in /var/www/html/blog/index.php (13)
+2023/07/28 11:11:03 [error] [php] include(Term.php): failed to open stream: No such file or directory (/var/www/html/framework/YiiBase.php:463)
+Stack trace:
+#0 /var/www/html/framework/db/ar/CActiveRecord.php(397): spl_autoload_call()
+#1 /var/www/html/framework/web/CActiveDataProvider.php(165): model()
+#2 /var/www/html/framework/web/CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 /var/www/html/blog/protected/controllers/CategoriaController.php(7): CActiveDataProvider->__construct()
+#4 /var/www/html/framework/web/actions/CInlineAction.php(49): CategoriaController->actionIndex()
+#5 /var/www/html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/html/framework/web/CController.php(286): CategoriaController->runAction()
+#7 /var/www/html/framework/web/CController.php(265): CategoriaController->runActionWithFilters()
+#8 /var/www/html/framework/web/CWebApplication.php(282): CategoriaController->run()
+#9 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /var/www/html/blog/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=categoria
+in /var/www/html/blog/protected/controllers/CategoriaController.php (7)
+in /var/www/html/blog/index.php (13)
+2023/07/28 11:11:06 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "about". in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('about')
+#1 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/blog/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=about
+HTTP_REFERER=https://localhost/
+---
+2023/07/28 11:11:39 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "about". in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('about')
+#1 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/blog/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=about
+HTTP_REFERER=https://localhost/
+---
+2023/07/28 11:11:43 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "contact". in /var/www/html/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('contact')
+#1 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /var/www/html/blog/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=contact
+HTTP_REFERER=https://localhost/
+---
+2023/07/28 11:12:03 [error] [exception.CHttpException.403] CHttpException: You are not allowed to access this page. in /var/www/html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/blog/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2023/07/28 11:12:12 [error] [exception.CHttpException.403] CHttpException: You are not allowed to access this page. in /var/www/html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/framework/web/CWebApplication.php(282): CController->run('index')
+#2 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/default/ind...')
+#3 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/blog/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii/default/index
+HTTP_REFERER=https://localhost/index.php?r=gii
+---
+2023/07/28 11:15:49 [error] [php] include(Term.php): failed to open stream: No such file or directory (/var/www/html/framework/YiiBase.php:463)
+Stack trace:
+#0 /var/www/html/framework/db/ar/CActiveRecord.php(397): spl_autoload_call()
+#1 /var/www/html/framework/web/CActiveDataProvider.php(165): model()
+#2 /var/www/html/framework/web/CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 /var/www/html/blog/protected/controllers/CategoriaController.php(7): CActiveDataProvider->__construct()
+#4 /var/www/html/framework/web/actions/CInlineAction.php(49): CategoriaController->actionIndex()
+#5 /var/www/html/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /var/www/html/framework/web/CController.php(286): CategoriaController->runAction()
+#7 /var/www/html/framework/web/CController.php(265): CategoriaController->runActionWithFilters()
+#8 /var/www/html/framework/web/CWebApplication.php(282): CategoriaController->run()
+#9 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /var/www/html/blog/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=categoria
+in /var/www/html/blog/protected/controllers/CategoriaController.php (7)
+in /var/www/html/blog/index.php (13)
+2023/07/28 11:16:32 [error] [exception.CHttpException.403] CHttpException: You are not allowed to access this page. in /var/www/html/framework/gii/GiiModule.php:170
+Stack trace:
+#0 /var/www/html/framework/web/CController.php(263): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/html/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www/html/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#3 /var/www/html/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /var/www/html/blog/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=gii
+---
