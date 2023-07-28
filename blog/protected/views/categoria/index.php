@@ -1,6 +1,16 @@
-<h1><?php echo GxHtml::encode(Term::label(2)); ?></h1>
+<?php
+/* @var $this CategoriaController */
 
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); 
+$this->breadcrumbs=array(
+	'Categoria',
+);
+?>
+
+<div> 
+	<?php foreach($data as $item): ?>
+		<div>
+			<h2><?php echo $item->name; ?></h2>
+			<p><?php echo $item->description; ?></p>
+		</div>
+	<?php endforeach; ?>
+</div>

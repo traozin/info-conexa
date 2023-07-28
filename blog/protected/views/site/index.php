@@ -1,12 +1,16 @@
 <?php
 /* @var $this SiteController */
 
-// $this->pageTitle = Yii::app()->name;
-// $posts = $dataProvider->getData();
-// ?>
 
-<div id="title-container" class=" text-center m-5">
-	<h1><?= CHtml::encode(Yii::app()->name); ?></h1>
+$this->breadcrumbs = array(
+	'Home',
+);
+?>
+
+<div class=" text-center m-5">
+	<h1>
+		<?= CHtml::encode(Yii::app()->name); ?>
+	</h1>
 	<div class="m-5 mb-0">
 		<div>
 			<h5 class="fw-normal ">Somos especialistas em empresas de serviços recorrentes e</h5>
@@ -19,27 +23,32 @@
 		</div>
 	</div>
 </div>
-<div id="posts-container" class="container d-flex justify-content-between align-items-around">
-	
 
-</div>
-<div class="container d-flex align-items-center justify-content-center mt-3">
+<h1>Últimos Posts</h1>
+<div>
+	<?php
+	// Mostrar os últimos 5 posts
+	$numPosts = 5;
+	$totalPosts = count($data);
 
-	<nav aria-label="Page navigation example">
-		<?php $zap = $this->widget('CLinkPager', array(
-			'pages' => $dataProvider->pagination,
-			'htmlOptions' => array('class' => 'pagination'),
-			'cssFile' => '',
-			'header' => '',
-			'firstPageCssClass' => 'd-none',
-			'selectedPageCssClass' => 'page-item active',
-			'internalPageCssClass' => 'page-item',
-			'previousPageCssClass' => 'page-item',
-			'nextPageCssClass' => 'page-item',
-			'lastPageCssClass' => 'd-none',
-			'firstPageLabel' => 'Primeiro',
-			'nextPageLabel' => 'Próximo',
-			'prevPageLabel' => 'Anterior',
-		)); ?>
-	</nav>
+	// Se houver menos de 5 posts, mostra todos, senão mostra os últimos 5
+	$numToShow = min($numPosts, $totalPosts);
+
+	for ($i = 0; $i < $numToShow; $i++) {
+		$post = $data[$i];
+		?>
+		<div>
+			<h3>
+				<?php echo $post->title; ?>
+			</h3>
+			<h5>
+				<?php echo $post->author; ?>
+				<?php echo $post->category; ?>
+				<?php echo $post->date; ?>
+			</h5>
+			<h7>
+				<?php echo $post->body; ?>
+			</h7>
+		</div>
+	<?php } ?>
 </div>

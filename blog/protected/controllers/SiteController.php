@@ -1,4 +1,5 @@
 <?php
+require('../blog/protected/vendor/tcdent/php-restclient/restclient.php');
 
 class SiteController extends Controller
 {
@@ -27,9 +28,19 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$api = new RestClient([
+			'base_url' => 'https://my-json-server.typicode.com/traozin/db-conexa',
+			'headers' => [
+				'Accept' => 'application/json',
+				'Content-Type' => 'application/json'
+			]
+		]);
+
+		$result = $api->get('/posts');
+		$data = json_decode($result->response);
+		$this->render('index', [
+			'data' => $data
+		]);
 	}
 
 	/**

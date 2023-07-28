@@ -36,7 +36,7 @@
                     <div class="navbar-nav me-5">
                         <a href="<?= Yii::app()->request->baseUrl; ?>/" class="nav-link px-2 text-black">Home</a>
                         <a href="<?= Yii::app()->request->baseUrl; ?>/index.php?r=categoria" class="nav-link px-2 text-black">Categorias</a>
-                        <a href="<?= Yii::app()->request->baseUrl; ?>/index.php?r=contact" class="nav-link px-2 text-black">Sobre</a>
+                        <a href="<?= Yii::app()->request->baseUrl; ?>/index.php?r=sobre" class="nav-link px-2 text-black">Sobre</a>
                         <a href="https://conexa.app/" class="nav-link px-2 text-black">Site Oficial</a>
                     </div>
 
