@@ -15,7 +15,7 @@ class PostController extends Controller
 		return $api;
 	}
 
-	public function actionIndex()
+	public function actionView()
 	{
 		$id = isset($_GET['id']) ? $_GET['id'] : null;
 
@@ -38,6 +38,7 @@ class PostController extends Controller
 			'data' => $data
 		]);
 	}
+
 
 	// Uncomment the following methods and override them if needed
 	/*

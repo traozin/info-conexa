@@ -40,12 +40,14 @@ $this->breadcrumbs = array(
 
 		<!-- Formulário de Novo Comentário -->
 		<div class="comment-form">
-			<form action="adicionar_comentario.php" method="post">
+			<form action="/index.php?r=comentario/create" method="post">
 				<label for="author">Usuário:</label>
 				<input type="text" name="author" required>
 
 				<label for="comment">Comentário:</label>
 				<textarea name="comment" required></textarea>
+
+				<input type="hidden" name="idPost" value="<?php echo $data->id; ?>">
 
 				<button type="submit">Adicionar Comentário</button>
 			</form>

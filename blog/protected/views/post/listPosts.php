@@ -17,7 +17,7 @@ $this->breadcrumbs = array(
 		?>
 		<div id="post" class="post-container <?php echo strtolower($post->category); ?>-post">
 			<h3 class="post-title">
-				<a href='<?= Yii::app()->request->baseUrl; ?>/index.php?r=post&id=<?php echo $post->id; ?>'>
+				<a href='<?= Yii::app()->request->baseUrl; ?>/index.php?r=post/view&id=<?php echo $post->id; ?>'>
 					<strong>
 						<?php echo $post->title; ?>
 					</strong>
