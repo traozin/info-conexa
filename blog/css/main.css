@@ -227,3 +227,41 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+/* Estilos para os diferentes nichos de postagens */
+.post-container {
+	border: 1px solid #ccc;
+	background-color: #f0f0f0;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+
+.tech-post {
+	background-color: #f0f0f0;
+}
+
+.food-post {
+	background-color: #ffeead;
+}
+
+.outros-post {
+	background-color: #c9e8f0;
+}
+
+/* Estilos comuns a todas as postagens */
+.post-title {
+	font-size: 24px;
+	margin-bottom: 5px;
+}
+
+.post-meta {
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.post-body {
+	font-size: 16px;
+	/* Limitar a quantidade de texto do body e adicionar overflow scroll */
+	max-height: 200px;
+	overflow: hidden;
+}

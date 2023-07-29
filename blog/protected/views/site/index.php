@@ -37,18 +37,28 @@ $this->breadcrumbs = array(
 	for ($i = 0; $i < $numToShow; $i++) {
 		$post = $data[$i];
 		?>
-		<div>
-			<h3>
-				<?php echo $post->title; ?>
+		<div class="post-container <?php echo strtolower($post->category); ?>-post">
+			<h3 class="post-title">
+				<strong>
+					<?php echo $post->title; ?>
+				</strong>
 			</h3>
-			<h5>
-				<?php echo $post->author; ?>
+			<div class="post-meta">
+				<?php echo "@$post->author"; ?>
 				<?php echo $post->category; ?>
 				<?php echo $post->date; ?>
-			</h5>
-			<h7>
-				<?php echo $post->body; ?>
-			</h7>
+			</div>
+			<div class="post-body">
+				<?php
+				// Limitar a quantidade de texto do body
+				$maxBodyLength = 200;
+				$body = $post->body;
+				if (strlen($body) > $maxBodyLength) {
+					$body = substr($body, 0, $maxBodyLength) . '...';
+				}
+				echo $body;
+				?>
+			</div>
 		</div>
 	<?php } ?>
 </div>
