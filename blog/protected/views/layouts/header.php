@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="pt-br">
@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav me-5">
                         <a href="<?= Yii::app()->request->baseUrl; ?>/" class="nav-link px-2 text-black">Home</a>
-                        <a href="<?= Yii::app()->request->baseUrl; ?>/index.php?r=postagens" class="nav-link px-2 text-black">Categorias</a>
+                        <a href="<?= Yii::app()->request->baseUrl; ?>/index.php?r=post/listposts" class="nav-link px-2 text-black">Postagens</a>
                         <a href="<?= Yii::app()->request->baseUrl; ?>/index.php?r=sobre" class="nav-link px-2 text-black">Sobre</a>
                         <a href="https://conexa.app/" class="nav-link px-2 text-black">Site Oficial</a>
                     </div>
