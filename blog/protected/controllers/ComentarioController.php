@@ -36,7 +36,6 @@ class ComentarioController extends Controller
         $data->comments[] = $newComment;
 
         $result = $api->put('/posts/' . $idPost, json_encode($data));
-
         $this->redirect('index.php?r=post/view&id=' . $idPost);
     }
 }

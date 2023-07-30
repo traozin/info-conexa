@@ -7,13 +7,13 @@ $this->breadcrumbs = array(
 );
 ?>
 
-<div class=" text-center m-5">
+<div class="text-center m-5">
 	<h1>
 		<?= CHtml::encode(Yii::app()->name); ?>
 	</h1>
 	<div class="m-5 mb-0">
 		<div>
-			<h5 class="fw-normal ">Somos especialistas em empresas de serviços recorrentes e</h5>
+			<h5 class="fw-normal">Somos especialistas em empresas de serviços recorrentes e</h5>
 		</div>
 		<div>
 			<h5 class="fw-normal">queremos compartilhar tudo que estamos aprendendo. </h5>
@@ -27,11 +27,11 @@ $this->breadcrumbs = array(
 <h1>Últimos Posts</h1>
 <div>
 	<?php
-	// Mostrar os últimos 5 posts
-	$numPosts = 5;
+	// Mostrar os últimos 3 posts
+	$numPosts = 3;
 	$totalPosts = count($data);
 
-	// Se houver menos de 5 posts, mostra todos, senão mostra os últimos 5
+	// Se houver menos de 3 posts, mostra todos, senão mostra os últimos 3
 	$numToShow = min($numPosts, $totalPosts);
 
 	for ($i = 0; $i < $numToShow; $i++) {
@@ -39,9 +39,11 @@ $this->breadcrumbs = array(
 		?>
 		<div class="post-container <?php echo strtolower($post->category); ?>-post">
 			<h3 class="post-title">
-				<strong>
-					<?php echo $post->title; ?>
-				</strong>
+				<a href='<?= Yii::app()->request->baseUrl; ?>/index.php?r=post/view&id=<?php echo $post->id; ?>'>
+					<strong>
+						<?php echo $post->title; ?>
+					</strong>
+				</a>
 			</h3>
 			<div class="post-meta">
 				<?php echo "@$post->author"; ?>

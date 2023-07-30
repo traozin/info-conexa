@@ -6,8 +6,6 @@ $this->breadcrumbs = array(
 );
 ?>
 
-<title>Página de Postagem</title>
-
 <body>
 	<h3 class="post-title">
 		<strong>
@@ -37,15 +35,14 @@ $this->breadcrumbs = array(
 				</div>
 			</div>
 		<?php } ?>
-
 		<!-- Formulário de Novo Comentário -->
 		<div class="comment-form">
 			<form action="/index.php?r=comentario/create" method="post">
 				<label for="author">Usuário:</label>
-				<input type="text" name="author" required>
+				<input class="input-comment" type="text" name="author" required>
 
 				<label for="comment">Comentário:</label>
-				<textarea name="comment" required></textarea>
+				<textarea class="input-comment" name="comment" required></textarea>
 
 				<input type="hidden" name="idPost" value="<?php echo $data->id; ?>">
 
