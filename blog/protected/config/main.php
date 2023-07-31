@@ -71,6 +71,9 @@ return array(
 										*/
 			),
 		),
+		'ApiComponent' => array(
+			'class' => 'application.components.ApiComponent',
+		),
 
 	),
 

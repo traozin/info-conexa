@@ -1,28 +1,14 @@
 <?php
-require('../blog/protected/vendor/tcdent/php-restclient/restclient.php');
 
 class SiteController extends Controller
 {
-
-	private function getApi()
-	{
-		$api = new RestClient([
-			'base_url' => 'https://my-json-server.typicode.com/traozin/db-conexa',
-			'headers' => [
-				'Accept' => 'application/json',
-				'Content-Type' => 'application/json'
-			]
-		]);
-		return $api;
-	}
-
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex()
 	{
-		$api = $this->getApi();
+		$api = Yii::app()->ApiComponent->getApi();
 
 		$result = $api->get('/posts');
 		$data = json_decode($result->response);
@@ -30,6 +16,7 @@ class SiteController extends Controller
 			'data' => $data
 		]);
 	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 			 public function filters()

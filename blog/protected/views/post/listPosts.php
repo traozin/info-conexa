@@ -6,9 +6,11 @@ $this->breadcrumbs = array(
 );
 ?>
 
+
 <div class="header-posts">
 	<h1>
 		<?php echo 'Postagens' ?>
+
 	</h1>
 	<div class="styled-button ">
 		<a class="nav-link px-2 text-black" href="<?= Yii::app()->request->baseUrl; ?>/index.php?r=post/Novo">Nova
