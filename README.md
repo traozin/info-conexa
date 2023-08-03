@@ -24,5 +24,5 @@ Este projeto foi desenvolvido como parte do processo seletivo da empresa [Conexa
 ## Instalação:
 
 1. Clone o repositório
-2. Execute o comando `docker-compose up` na raiz do projeto
+2. Execute o comando `docker compose up` na raiz do projeto
 
